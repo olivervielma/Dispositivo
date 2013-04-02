@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dispositivo</title>
+
+    <script type="text/javascript" charset="utf-8" src="phonegap-1.0.0.js"></script>
+    <script type="text/javascript" charset="utf-8">
+
+    // Espera a que PhoneGap se inicie
+    //
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    // PhoneGap esta listo
+    //
+    function onDeviceReady() {
+        var element = document.getElementById('deviceProperties');
+
+        element.innerHTML = 'Nombre del dispositivo: '  + device.name     + '<br />' + 
+                            'Versión Phonegap: '       + device.phonegap + '<br />' + 
+                            'Plataforma: '              + device.platform + '<br />' + 
+                            'UUID: '                + device.uuid     + '<br />' + 
+                            'Versión: '            + device.version  + '<br />';
+    }
+
+    </script>
+  </head>
+  <body>
+    <p id="deviceProperties">Cargando...</p>
+  </body>
+</html>
